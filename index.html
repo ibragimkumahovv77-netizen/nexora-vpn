@@ -4,69 +4,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d19">
+<meta name="theme-color" content="#080b16">
 <title>NEXORA VPN — Your Digital Freedom</title>
+<meta name="description" content="NEXORA VPN — твоя цифровая свобода.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#080d19;color:white}
-header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1b2940}
-.logo{font-size:25px;font-weight:900;letter-spacing:3px}
-.logo span{color:#3984ff}
-nav a{color:#b8c6dd;text-decoration:none;margin-left:20px;font-size:14px}
-.hero{text-align:center;padding:100px 20px 85px;background:radial-gradient(ellipse at top,#16366b 0%,#080d19 65%)}
-.tag{color:#62a2ff;font-size:12px;letter-spacing:3px}
-h1{font-size:clamp(42px,8vw,76px);margin:25px 0 15px;font-weight:900}
+html{scroll-behavior:smooth}
+body{background:#080b16;color:white;font-family:Arial,sans-serif}
+header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1c2940}
+.logo{font-size:26px;font-weight:900;letter-spacing:3px}
+.logo span{color:#3989ff}
+nav a{color:#aab8d0;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{text-align:center;padding:100px 20px;background:radial-gradient(ellipse at top,#16366b,#080b16 70%)}
+.tag{color:#60a5fa;font-size:12px;letter-spacing:4px}
+h1{font-size:clamp(42px,8vw,76px);margin:28px 0;line-height:1.1}
 h1 span{color:#438bff}
-.hero p{color:#aab8ce;line-height:1.8;max-width:550px;margin:auto}
-.btn{display:inline-block;margin-top:30px;background:#2676f5;color:white;text-decoration:none;padding:16px 32px;border-radius:9px;font-weight:bold}
-section{padding:65px 7%;text-align:center}
-h2{font-size:32px;margin-bottom:18px}
-.sub{color:#98a8c0;margin-bottom:35px}
+.hero p{max-width:570px;margin:auto;color:#a9b8d0;line-height:1.8}
+.btn{display:inline-block;margin-top:30px;background:#2879f5;padding:16px 32px;border-radius:9px;color:white;text-decoration:none;font-weight:bold}
+section{padding:70px 7%;text-align:center}
+h2{font-size:34px;margin-bottom:15px}
+.subtitle{color:#91a3bf;margin-bottom:38px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#111c30;border:1px solid #243652;padding:30px 20px;border-radius:15px}
-.card .symbol{font-size:35px;margin-bottom:18px}
-.card p{color:#9eafc7;line-height:1.7;margin-top:12px}
-.price{font-size:32px;color:#5b9cff;margin:20px}
-footer{text-align:center;padding:35px;color:#75849c;border-top:1px solid #1b2940;font-size:13px}
+.card{background:linear-gradient(145deg,#14213a,#0e1729);border:1px solid #253b5d;border-radius:16px;padding:30px 22px}
+.symbol{font-size:38px;margin-bottom:18px}
+.card p{color:#9aabc5;line-height:1.7;margin-top:13px}
+.price{font-size:38px;color:#5b9cff;font-weight:bold;margin:20px 0}
+.card.featured{border:1px solid #438bff;box-shadow:0 0 25px #2879f522}
+.plan-button{display:inline-block;margin-top:20px;padding:12px 24px;background:#2879f5;color:white;text-decoration:none;border-radius:8px}
+.note{font-size:12px;color:#8495ae;margin-top:25px}
+footer{text-align:center;border-top:1px solid #1c2940;padding:40px 15px;color:#8191aa}
+footer .logo{margin-bottom:14px}
+@media(max-width:500px){header{padding:18px 5%}nav a{margin-left:10px;font-size:12px}section{padding:55px 5%}}
 </style>
 </head>
 <body>
+
 <header>
 <div class="logo">NEXORA<span>.</span></div>
-<nav><a href="#features">Преимущества</a><a href="#plans">Тарифы</a></nav>
+<nav>
+<a href="#features">Преимущества</a>
+<a href="#plans">Тарифы</a>
+</nav>
 </header>
 
+<main>
 <div class="hero">
-<div class="tag">NEXT GENERATION PRIVACY</div>
+<div class="tag">NEXT GENERATION VPN</div>
 <h1>Your privacy.<br><span>Your freedom.</span></h1>
-<p>Открой для себя новый уровень цифровой свободы с NEXORA VPN. Твоя конфиденциальность — наш приоритет.</p>
-<a class="btn" href="#plans">Explore NEXORA →</a>
+<p>Открой новый уровень цифровой свободы. NEXORA создаётся для тех, кто ценит конфиденциальность и безопасность в интернете.</p>
+<a class="btn" href="#plans">Выбрать тариф →</a>
 </div>
 
 <section id="features">
 <h2>Почему NEXORA?</h2>
-<p class="sub">Безопасность и свобода в цифровом мире.</p>
+<p class="subtitle">Технологии для твоей цифровой свободы.</p>
 <div class="cards">
-<div class="card"><div class="symbol">🛡️</div><h3>Privacy</h3><p>Защита интернет-соединения и конфиденциальности.</p></div>
-<div class="card"><div class="symbol">⚡</div><h3>Performance</h3><p>Стабильное соединение и высокая производительность.</p></div>
-<div class="card"><div class="symbol">🌍</div><h3>Global Access</h3><p>Возможность подключаться к серверам в разных странах.</p></div>
+<div class="card">
+<div class="symbol">🛡️</div>
+<h3>Privacy</h3>
+<p>Защита интернет-соединения и конфиденциальности.</p>
+</div>
+<div class="card">
+<div class="symbol">⚡</div>
+<h3>Performance</h3>
+<p>Работаем над стабильным и быстрым соединением.</p>
+</div>
+<div class="card">
+<div class="symbol">🌍</div>
+<h3>Global Access</h3>
+<p>Планируем расширение сети серверов в разных странах.</p>
+</div>
 </div>
 </section>
 
 <section id="plans">
-<h2>Выбери свой план</h2>
-<p class="sub">Гибкие планы NEXORA VPN.</p>
+<h2>Тарифы NEXORA</h2>
+<p class="subtitle">Цифровая свобода по доступной цене.</p>
+
 <div class="cards">
-<div class="card"><h3>Monthly</h3><div class="price">€4.99</div><p>Подписка на 1 месяц</p></div>
-<div class="card"><h3>Yearly</h3><div class="price">€39.99</div><p>Подписка на 12 месяцев</p></div>
+<div class="card featured">
+<div class="symbol">⚡</div>
+<h3>Monthly</h3>
+<div class="price">2 €</div>
+<p>Доступ на 1 месяц.</p>
+<a class="plan-button" href="mailto:contact@nexora.example">Выбрать</a>
 </div>
-<p style="color:#8394ae;margin-top:25px;font-size:12px">Тарифы предварительные. Подключение и оплата пока не активированы.</p>
+
+<div class="card">
+<div class="symbol">🚀</div>
+<h3>Quarterly</h3>
+<div class="price">5 €</div>
+<p>Доступ на 3 месяца.</p>
+<a class="plan-button" href="mailto:contact@nexora.example">Выбрать</a>
+</div>
+
+<div class="card">
+<div class="symbol">👑</div>
+<h3>Yearly</h3>
+<div class="price">18 €</div>
+<p>Доступ на 12 месяцев.</p>
+<a class="plan-button" href="mailto:contact@nexora.example">Выбрать</a>
+</div>
+</div>
+
+<p class="note">Предварительные тарифы. Оплата и VPN-подключение пока не активированы.</p>
 </section>
+</main>
 
 <footer>
 <div class="logo">NEXORA<span>.</span></div>
-<p style="margin-top:12px">Your Digital Freedom.</p>
+<p>Your Digital Freedom.</p>
 <p style="margin-top:15px">© 2026 NEXORA. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
