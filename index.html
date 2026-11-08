@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#091426">
+<title>NEXORA VPN — Private Network</title>
+<style>
+:root {
+  --bg:#091426;
+  --panel:#112541;
+  --blue:#39adf5;
+  --light:#91d9ff;
+  --white:#f5f9ff;
+  --muted:#a8bad1;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+nav {
+  padding:22px 7%;
+  border-bottom:1px solid #1d3451;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo {font-size:25px;font-weight:800;letter-spacing:2px}
+.logo span {color:var(--blue)}
+button {
+  cursor:pointer;
+  padding:11px 16px;
+  border-radius:10px;
+  font-weight:bold;
+}
+.lang {background:#142a46;color:white;border:1px solid #294768}
+.hero {
+  text-align:center;
+  padding:85px 20px;
+  background:radial-gradient(ellipse at top,#17385e,var(--bg) 70%);
+}
+.shield {
+  font-size:42px;
+  background:#16365a;
+  border-radius:25px;
+  width:82px;height:82px;
+  display:grid;place-items:center;
+  margin:0 auto 25px;
+  color:var(--light);
+}
+.eyebrow {color:var(--light);letter-spacing:3px;font-size:12px}
+h1 {font-size:clamp(38px,7vw,65px);line-height:1.15}
+h1 span {color:var(--blue)}
+.hero p {
+  color:var(--muted);
+  max-width:550px;
+  margin:auto;
+  line-height:1.8;
+}
+.actions {
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.primary {background:var(--blue);color:#071629;border:0}
+.secondary {background:transparent;color:white;border:1px solid #436080}
+.section {max-width:1050px;margin:auto;padding:60px 22px}
+.section-title {text-align:center;font-size:30px}
+.section-sub {text-align:center;color:var(--muted);line-height:1.7}
+.features {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:35px;
+}
+.card {
+  background:var(--panel);
+  border:1px solid #1d3a5b;
+  border-radius:18px;
+  padding:25px;
+}
+.card-icon {font-size:30px}
+.card p {color:var(--muted);line-height:1.7}
+.price {
+  max-width:450px;
+  margin:30px auto;
+  background:linear-gradient(145deg,#153657,#10213a);
+  border:1px solid #3476a7;
+  border-radius:22px;
+  padding:30px;
+  text-align:center;
+}
+.amount {font-size:46px;font-weight:800;margin:20px}
+.amount small {font-size:15px;color:var(--muted)}
+ul {text-align:left;line-height:2.5}
+.notice {
+  background:#10213a;
+  border:1px solid #294768;
+  padding:16px;
+  border-radius:12px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+footer {
+  text-align:center;
+  border-top:1px solid #1d3451;
+  padding:35px;
+  color:var(--muted);
+}
+@media(max-width:650px) {
+  .features {grid-template-columns:1fr}
+  .hero {padding:65px 20px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">NEXORA<span>.</span></div>
+  <button class="lang" onclick="toggleLang()" id="lang">EN</button>
+</nav>
+
+<header class="hero">
+  <div class="shield">⬡</div>
+  <div class="eyebrow" data-ru="ЧАСТНАЯ СЕТЬ" data-en="PRIVATE NETWORK">ЧАСТНАЯ СЕТЬ</div>
+  <h1 data-ru="Твоя приватность.<br><span>Твоё соединение.</span>"
+       data-en="Your privacy.<br><span>Your connection.</span>">
+       Твоя приватность.<br><span>Твоё соединение.</span>
+  </h1>
+  <p data-ru="NEXORA — концепция современного VPN-сервиса с простым интерфейсом и акцентом на безопасность."
+     data-en="NEXORA is a modern VPN service concept focused on simplicity and connection security.">
+     NEXORA — концепция современного VPN-сервиса с простым интерфейсом и акцентом на безопасность.
+  </p>
+  <div class="actions">
+    <button class="primary" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})"
+      data-ru="Посмотреть тариф" data-en="View plan">Посмотреть тариф</button>
+    <button class="secondary" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})"
+      data-ru="Подробнее" data-en="Learn more">Подробнее</button>
+  </div>
+</header>
+
+<section class="section" id="features">
+  <h2 class="section-title" data-ru="Почему NEXORA?" data-en="Why NEXORA?">Почему NEXORA?</h2>
+  <p class="section-sub" data-ru="Мы создаём понятный и удобный продукт."
+     data-en="We are creating a simple and convenient product.">
+     Мы создаём понятный и удобный продукт.
+  </p>
+  <div class="features">
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3 data-ru="Защита соединения" data-en="Connection security">Защита соединения</h3>
+      <p data-ru="Современный подход к защите сетевого соединения."
+         data-en="A modern approach to network connection security.">Современный подход к защите сетевого соединения.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3 data-ru="Простота" data-en="Simplicity">Простота</h3>
+      <p data-ru="Понятное управление устройствами."
+         data-en="Simple device management.">Понятное управление устройствами.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌍</div>
+      <h3 data-ru="Европа" data-en="Europe">Европа</h3>
+      <p data-ru="Первый технический прототип планируется в Германии."
+         data-en="The first technical prototype is planned in Germany.">Первый технический прототип планируется в Германии.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plan">
+  <h2 class="section-title" data-ru="Планируемый тариф" data-en="Planned plan">Планируемый тариф</h2>
+  <div class="price">
+    <h3>NEXORA BASIC</h3>
+    <div class="amount">199 ₽ <small>/ 30 дней</small></div>
+    <p data-ru="Предполагаемая стоимость подписки."
+       data-en="Proposed subscription price.">Предполагаемая стоимость подписки.</p>
+    <ul>
+      <li data-ru="✓ Защищённое соединение" data-en="✓ Secure connection">✓ Защищённое соединение</li>
+      <li data-ru="✓ Поддержка WireGuard" data-en="✓ WireGuard support">✓ Поддержка WireGuard</li>
+      <li data-ru="✓ Удобное управление" data-en="✓ Easy management">✓ Удобное управление</li>
+    </ul>
+    <div class="notice" data-ru="Проект находится в разработке. Подписка, оплата и подключение пока недоступны."
+      data-en="The project is under development. Subscriptions, payments and connections are not yet available.">
+      Проект находится в разработке. Подписка, оплата и подключение пока недоступны.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="notice" data-ru="NEXORA — демонстрационный проект. Функции и инфраструктура будут проверены до запуска."
+    data-en="NEXORA is a demonstration project. Features and infrastructure will be tested before launch.">
+    NEXORA — демонстрационный проект. Функции и инфраструктура будут проверены до запуска.
+  </div>
+</section>
+
+<footer>
+  <div class="logo">NEXORA<span>.</span></div>
+  PRIVATE NETWORK · © 2026
+</footer>
+
+<script>
+let currentLang="ru";
+function toggleLang(){
+  currentLang=currentLang==="ru"?"en":"ru";
+  document.documentElement.lang=currentLang;
+  document.querySelectorAll("[data-ru]").forEach(el=>{
+    el.innerHTML=el.getAttribute("data-"+currentLang);
+  });
+  document.getElementById("lang").textContent=
+    currentLang==="ru"?"EN":"RU";
+}
+</script>
+</body>
+</html>
