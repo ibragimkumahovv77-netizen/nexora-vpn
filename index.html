@@ -3,218 +3,70 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#091426">
-<title>NEXORA VPN — Private Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d19">
+<title>NEXORA VPN — Your Digital Freedom</title>
 <style>
-:root {
-  --bg:#091426;
-  --panel:#112541;
-  --blue:#39adf5;
-  --light:#91d9ff;
-  --white:#f5f9ff;
-  --muted:#a8bad1;
-}
-* {box-sizing:border-box}
-body {
-  margin:0;
-  background:var(--bg);
-  color:var(--white);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-nav {
-  padding:22px 7%;
-  border-bottom:1px solid #1d3451;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo {font-size:25px;font-weight:800;letter-spacing:2px}
-.logo span {color:var(--blue)}
-button {
-  cursor:pointer;
-  padding:11px 16px;
-  border-radius:10px;
-  font-weight:bold;
-}
-.lang {background:#142a46;color:white;border:1px solid #294768}
-.hero {
-  text-align:center;
-  padding:85px 20px;
-  background:radial-gradient(ellipse at top,#17385e,var(--bg) 70%);
-}
-.shield {
-  font-size:42px;
-  background:#16365a;
-  border-radius:25px;
-  width:82px;height:82px;
-  display:grid;place-items:center;
-  margin:0 auto 25px;
-  color:var(--light);
-}
-.eyebrow {color:var(--light);letter-spacing:3px;font-size:12px}
-h1 {font-size:clamp(38px,7vw,65px);line-height:1.15}
-h1 span {color:var(--blue)}
-.hero p {
-  color:var(--muted);
-  max-width:550px;
-  margin:auto;
-  line-height:1.8;
-}
-.actions {
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.primary {background:var(--blue);color:#071629;border:0}
-.secondary {background:transparent;color:white;border:1px solid #436080}
-.section {max-width:1050px;margin:auto;padding:60px 22px}
-.section-title {text-align:center;font-size:30px}
-.section-sub {text-align:center;color:var(--muted);line-height:1.7}
-.features {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:35px;
-}
-.card {
-  background:var(--panel);
-  border:1px solid #1d3a5b;
-  border-radius:18px;
-  padding:25px;
-}
-.card-icon {font-size:30px}
-.card p {color:var(--muted);line-height:1.7}
-.price {
-  max-width:450px;
-  margin:30px auto;
-  background:linear-gradient(145deg,#153657,#10213a);
-  border:1px solid #3476a7;
-  border-radius:22px;
-  padding:30px;
-  text-align:center;
-}
-.amount {font-size:46px;font-weight:800;margin:20px}
-.amount small {font-size:15px;color:var(--muted)}
-ul {text-align:left;line-height:2.5}
-.notice {
-  background:#10213a;
-  border:1px solid #294768;
-  padding:16px;
-  border-radius:12px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.7;
-}
-footer {
-  text-align:center;
-  border-top:1px solid #1d3451;
-  padding:35px;
-  color:var(--muted);
-}
-@media(max-width:650px) {
-  .features {grid-template-columns:1fr}
-  .hero {padding:65px 20px}
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#080d19;color:white}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1b2940}
+.logo{font-size:25px;font-weight:900;letter-spacing:3px}
+.logo span{color:#3984ff}
+nav a{color:#b8c6dd;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{text-align:center;padding:100px 20px 85px;background:radial-gradient(ellipse at top,#16366b 0%,#080d19 65%)}
+.tag{color:#62a2ff;font-size:12px;letter-spacing:3px}
+h1{font-size:clamp(42px,8vw,76px);margin:25px 0 15px;font-weight:900}
+h1 span{color:#438bff}
+.hero p{color:#aab8ce;line-height:1.8;max-width:550px;margin:auto}
+.btn{display:inline-block;margin-top:30px;background:#2676f5;color:white;text-decoration:none;padding:16px 32px;border-radius:9px;font-weight:bold}
+section{padding:65px 7%;text-align:center}
+h2{font-size:32px;margin-bottom:18px}
+.sub{color:#98a8c0;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#111c30;border:1px solid #243652;padding:30px 20px;border-radius:15px}
+.card .symbol{font-size:35px;margin-bottom:18px}
+.card p{color:#9eafc7;line-height:1.7;margin-top:12px}
+.price{font-size:32px;color:#5b9cff;margin:20px}
+footer{text-align:center;padding:35px;color:#75849c;border-top:1px solid #1b2940;font-size:13px}
 </style>
 </head>
 <body>
-<nav>
-  <div class="logo">NEXORA<span>.</span></div>
-  <button class="lang" onclick="toggleLang()" id="lang">EN</button>
-</nav>
-
-<header class="hero">
-  <div class="shield">⬡</div>
-  <div class="eyebrow" data-ru="ЧАСТНАЯ СЕТЬ" data-en="PRIVATE NETWORK">ЧАСТНАЯ СЕТЬ</div>
-  <h1 data-ru="Твоя приватность.<br><span>Твоё соединение.</span>"
-       data-en="Your privacy.<br><span>Your connection.</span>">
-       Твоя приватность.<br><span>Твоё соединение.</span>
-  </h1>
-  <p data-ru="NEXORA — концепция современного VPN-сервиса с простым интерфейсом и акцентом на безопасность."
-     data-en="NEXORA is a modern VPN service concept focused on simplicity and connection security.">
-     NEXORA — концепция современного VPN-сервиса с простым интерфейсом и акцентом на безопасность.
-  </p>
-  <div class="actions">
-    <button class="primary" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})"
-      data-ru="Посмотреть тариф" data-en="View plan">Посмотреть тариф</button>
-    <button class="secondary" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})"
-      data-ru="Подробнее" data-en="Learn more">Подробнее</button>
-  </div>
+<header>
+<div class="logo">NEXORA<span>.</span></div>
+<nav><a href="#features">Преимущества</a><a href="#plans">Тарифы</a></nav>
 </header>
 
-<section class="section" id="features">
-  <h2 class="section-title" data-ru="Почему NEXORA?" data-en="Why NEXORA?">Почему NEXORA?</h2>
-  <p class="section-sub" data-ru="Мы создаём понятный и удобный продукт."
-     data-en="We are creating a simple and convenient product.">
-     Мы создаём понятный и удобный продукт.
-  </p>
-  <div class="features">
-    <div class="card">
-      <div class="card-icon">🛡️</div>
-      <h3 data-ru="Защита соединения" data-en="Connection security">Защита соединения</h3>
-      <p data-ru="Современный подход к защите сетевого соединения."
-         data-en="A modern approach to network connection security.">Современный подход к защите сетевого соединения.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">⚡</div>
-      <h3 data-ru="Простота" data-en="Simplicity">Простота</h3>
-      <p data-ru="Понятное управление устройствами."
-         data-en="Simple device management.">Понятное управление устройствами.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🌍</div>
-      <h3 data-ru="Европа" data-en="Europe">Европа</h3>
-      <p data-ru="Первый технический прототип планируется в Германии."
-         data-en="The first technical prototype is planned in Germany.">Первый технический прототип планируется в Германии.</p>
-    </div>
-  </div>
+<div class="hero">
+<div class="tag">NEXT GENERATION PRIVACY</div>
+<h1>Your privacy.<br><span>Your freedom.</span></h1>
+<p>Открой для себя новый уровень цифровой свободы с NEXORA VPN. Твоя конфиденциальность — наш приоритет.</p>
+<a class="btn" href="#plans">Explore NEXORA →</a>
+</div>
+
+<section id="features">
+<h2>Почему NEXORA?</h2>
+<p class="sub">Безопасность и свобода в цифровом мире.</p>
+<div class="cards">
+<div class="card"><div class="symbol">🛡️</div><h3>Privacy</h3><p>Защита интернет-соединения и конфиденциальности.</p></div>
+<div class="card"><div class="symbol">⚡</div><h3>Performance</h3><p>Стабильное соединение и высокая производительность.</p></div>
+<div class="card"><div class="symbol">🌍</div><h3>Global Access</h3><p>Возможность подключаться к серверам в разных странах.</p></div>
+</div>
 </section>
 
-<section class="section" id="plan">
-  <h2 class="section-title" data-ru="Планируемый тариф" data-en="Planned plan">Планируемый тариф</h2>
-  <div class="price">
-    <h3>NEXORA BASIC</h3>
-    <div class="amount">199 ₽ <small>/ 30 дней</small></div>
-    <p data-ru="Предполагаемая стоимость подписки."
-       data-en="Proposed subscription price.">Предполагаемая стоимость подписки.</p>
-    <ul>
-      <li data-ru="✓ Защищённое соединение" data-en="✓ Secure connection">✓ Защищённое соединение</li>
-      <li data-ru="✓ Поддержка WireGuard" data-en="✓ WireGuard support">✓ Поддержка WireGuard</li>
-      <li data-ru="✓ Удобное управление" data-en="✓ Easy management">✓ Удобное управление</li>
-    </ul>
-    <div class="notice" data-ru="Проект находится в разработке. Подписка, оплата и подключение пока недоступны."
-      data-en="The project is under development. Subscriptions, payments and connections are not yet available.">
-      Проект находится в разработке. Подписка, оплата и подключение пока недоступны.
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="notice" data-ru="NEXORA — демонстрационный проект. Функции и инфраструктура будут проверены до запуска."
-    data-en="NEXORA is a demonstration project. Features and infrastructure will be tested before launch.">
-    NEXORA — демонстрационный проект. Функции и инфраструктура будут проверены до запуска.
-  </div>
+<section id="plans">
+<h2>Выбери свой план</h2>
+<p class="sub">Гибкие планы NEXORA VPN.</p>
+<div class="cards">
+<div class="card"><h3>Monthly</h3><div class="price">€4.99</div><p>Подписка на 1 месяц</p></div>
+<div class="card"><h3>Yearly</h3><div class="price">€39.99</div><p>Подписка на 12 месяцев</p></div>
+</div>
+<p style="color:#8394ae;margin-top:25px;font-size:12px">Тарифы предварительные. Подключение и оплата пока не активированы.</p>
 </section>
 
 <footer>
-  <div class="logo">NEXORA<span>.</span></div>
-  PRIVATE NETWORK · © 2026
+<div class="logo">NEXORA<span>.</span></div>
+<p style="margin-top:12px">Your Digital Freedom.</p>
+<p style="margin-top:15px">© 2026 NEXORA. All rights reserved.</p>
 </footer>
-
-<script>
-let currentLang="ru";
-function toggleLang(){
-  currentLang=currentLang==="ru"?"en":"ru";
-  document.documentElement.lang=currentLang;
-  document.querySelectorAll("[data-ru]").forEach(el=>{
-    el.innerHTML=el.getAttribute("data-"+currentLang);
-  });
-  document.getElementById("lang").textContent=
-    currentLang==="ru"?"EN":"RU";
-}
-</script>
 </body>
 </html>
