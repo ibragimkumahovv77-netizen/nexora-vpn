@@ -3,118 +3,130 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#080b16">
-<title>NEXORA VPN — Твоя цифровая свобода</title>
-<meta name="description" content="NEXORA VPN — безопасность и свобода в интернете.">
+<title>NEXORA VPN</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:#080b16;color:#fff;font-family:Arial,sans-serif}
-header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1c2940}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#080b16;color:white;font-family:Arial,sans-serif}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #24334c}
 .logo{font-size:26px;font-weight:900;letter-spacing:3px}
 .logo span{color:#3989ff}
-nav a{color:#aab8d0;text-decoration:none;margin-left:20px;font-size:14px}
-.hero{text-align:center;padding:100px 20px;background:radial-gradient(ellipse at top,#16366b,#080b16 70%)}
-.tag{color:#60a5fa;font-size:12px;letter-spacing:4px}
-h1{font-size:clamp(42px,8vw,76px);margin:28px 0;line-height:1.1}
+button{cursor:pointer;border:0;border-radius:8px;padding:11px 16px;background:#2879f5;color:white;font-weight:bold}
+nav{display:flex;gap:10px;align-items:center}
+nav a{color:#b8c8df;text-decoration:none;font-size:13px}
+.lang{background:#192943;border:1px solid #35527b}
+.hero{text-align:center;padding:100px 20px;background:radial-gradient(ellipse at top,#173c75,#080b16 70%)}
+.tag{color:#60a5fa;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(40px,8vw,72px);margin:27px 0;line-height:1.12}
 h1 span{color:#438bff}
-.hero p{max-width:570px;margin:auto;color:#a9b8d0;line-height:1.8}
-.btn{display:inline-block;margin-top:30px;background:#2879f5;padding:16px 32px;border-radius:9px;color:#fff;text-decoration:none;font-weight:bold}
+.hero p,.sub{color:#aab8d0;line-height:1.8;max-width:570px;margin:0 auto}
 section{padding:70px 7%;text-align:center}
-h2{font-size:34px;margin-bottom:15px}
-.subtitle{color:#91a3bf;margin-bottom:38px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:linear-gradient(145deg,#14213a,#0e1729);border:1px solid #253b5d;border-radius:16px;padding:30px 22px}
-.symbol{font-size:38px;margin-bottom:18px}
+h2{font-size:32px;margin-bottom:15px}
+.sub{margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:#111e33;border:1px solid #29415f;border-radius:15px;padding:30px 20px}
 .card p{color:#9aabc5;line-height:1.7;margin-top:13px}
-.price{font-size:38px;color:#5b9cff;font-weight:bold;margin:20px 0}
-.featured{border:1px solid #438bff;box-shadow:0 0 25px #2879f522}
-.plan-button{display:inline-block;margin-top:20px;padding:12px 24px;background:#2879f5;color:white;text-decoration:none;border-radius:8px}
-.note{font-size:12px;color:#8495ae;margin-top:25px;line-height:1.7}
-footer{text-align:center;border-top:1px solid #1c2940;padding:40px 15px;color:#8191aa}
-footer .logo{margin-bottom:14px}
-@media(max-width:500px){header{padding:18px 5%}nav a{margin-left:10px;font-size:12px}section{padding:55px 5%}}
+.symbol{font-size:36px;margin-bottom:15px}
+.price{font-size:35px;color:#60a5ff;margin:20px 0;font-weight:bold}
+.featured{border-color:#438bff}
+footer{text-align:center;padding:35px;color:#8495ae;border-top:1px solid #24334c}
+@media(max-width:480px){header{padding:18px 4%}nav a{font-size:11px}}
 </style>
 </head>
 <body>
 <header>
 <div class="logo">NEXORA<span>.</span></div>
 <nav>
-<a href="#features">Преимущества</a>
-<a href="#plans">Тарифы</a>
+<a href="#features" id="navFeatures">Преимущества</a>
+<a href="#plans" id="navPlans">Тарифы</a>
+<button class="lang" onclick="toggleLanguage()" id="language">EN</button>
 </nav>
 </header>
 
 <main>
 <div class="hero">
 <div class="tag">NEXT GENERATION VPN</div>
-<h1>Your privacy.<br><span>Your freedom.</span></h1>
-<p>Открой новый уровень цифровой свободы. NEXORA создаётся для тех, кто ценит конфиденциальность и безопасность в интернете.</p>
-<a class="btn" href="#plans">Выбрать тариф →</a>
+<h1 id="headline">Твоя приватность.<br><span>Твоя свобода.</span></h1>
+<p id="intro">Открой новый уровень цифровой свободы с NEXORA.</p>
+<a href="#plans"><button id="heroButton" style="margin-top:30px">Выбрать тариф →</button></a>
 </div>
 
 <section id="features">
-<h2>Почему NEXORA?</h2>
-<p class="subtitle">Технологии для твоей цифровой свободы.</p>
+<h2 id="featuresTitle">Почему NEXORA?</h2>
+<p class="sub" id="featuresSub">Технологии для твоей цифровой свободы.</p>
 <div class="cards">
-<div class="card">
-<div class="symbol">🛡️</div>
-<h3>Privacy</h3>
-<p>Защита интернет-соединения и конфиденциальности.</p>
-</div>
-<div class="card">
-<div class="symbol">⚡</div>
-<h3>Performance</h3>
-<p>Работаем над стабильным и быстрым соединением.</p>
-</div>
-<div class="card">
-<div class="symbol">🌍</div>
-<h3>Global Access</h3>
-<p>Планируем расширение сети серверов в разных странах.</p>
-</div>
+<div class="card"><div class="symbol">🛡️</div><h3 id="f1">Приватность</h3><p id="p1">Защита интернет-соединения и конфиденциальности.</p></div>
+<div class="card"><div class="symbol">⚡</div><h3 id="f2">Производительность</h3><p id="p2">Работаем над стабильным соединением.</p></div>
+<div class="card"><div class="symbol">🌍</div><h3 id="f3">Глобальный доступ</h3><p id="p3">Планируем сеть серверов в разных странах.</p></div>
 </div>
 </section>
 
 <section id="plans">
-<h2>Тарифы NEXORA</h2>
-<p class="subtitle">Цифровая свобода по доступной цене.</p>
+<h2 id="plansTitle">Тарифы NEXORA</h2>
+<p class="sub" id="plansSub">Выбери подходящий план.</p>
 <div class="cards">
-<div class="card featured">
-<div class="symbol">⚡</div>
-<h3>Monthly</h3>
-<div class="price">199 ₽</div>
-<p>Доступ на 1 месяц.</p>
-<a class="plan-button" href="#contact">Выбрать</a>
+<div class="card featured"><div class="symbol">⚡</div><h3 id="m1">На месяц</h3><div class="price">199 ₽</div><p id="m2">Доступ на 1 месяц.</p></div>
+<div class="card"><div class="symbol">🚀</div><h3 id="q1">На 3 месяца</h3><div class="price">499 ₽</div><p id="q2">Доступ на 3 месяца.</p></div>
+<div class="card"><div class="symbol">👑</div><h3 id="y1">На год</h3><div class="price">1 799 ₽</div><p id="y2">Доступ на 12 месяцев.</p></div>
 </div>
-<div class="card">
-<div class="symbol">🚀</div>
-<h3>Quarterly</h3>
-<div class="price">499 ₽</div>
-<p>Доступ на 3 месяца.</p>
-<a class="plan-button" href="#contact">Выбрать</a>
-</div>
-<div class="card">
-<div class="symbol">👑</div>
-<h3>Yearly</h3>
-<div class="price">1 799 ₽</div>
-<p>Доступ на 12 месяцев.</p>
-<a class="plan-button" href="#contact">Выбрать</a>
-</div>
-</div>
-<p class="note">Цены указаны в российских рублях. Оплата и VPN-подключение пока не активированы.</p>
-</section>
-
-<section id="contact">
-<h2>Связаться с NEXORA</h2>
-<p class="subtitle">Скоро здесь появится служба поддержки.</p>
+<p class="sub" id="note" style="margin-top:25px">Тарифы демонстрационные. Оплата и VPN-подключение пока не активированы.</p>
 </section>
 </main>
 
 <footer>
 <div class="logo">NEXORA<span>.</span></div>
-<p>Your Digital Freedom.</p>
-<p style="margin-top:15px">© 2026 NEXORA. All rights reserved.</p>
+<p id="footerText">Твоя цифровая свобода.</p>
+<p>© 2026 NEXORA</p>
 </footer>
+
+<script>
+let currentLanguage="RU";
+const translations={
+RU:{
+navFeatures:"Преимущества",navPlans:"Тарифы",
+headline:'Твоя приватность.<br><span>Твоя свобода.</span>',
+intro:"Открой новый уровень цифровой свободы с NEXORA.",
+heroButton:"Выбрать тариф →",
+featuresTitle:"Почему NEXORA?",
+featuresSub:"Технологии для твоей цифровой свободы.",
+f1:"Приватность",p1:"Защита интернет-соединения и конфиденциальности.",
+f2:"Производительность",p2:"Работаем над стабильным соединением.",
+f3:"Глобальный доступ",p3:"Планируем сеть серверов в разных странах.",
+plansTitle:"Тарифы NEXORA",plansSub:"Выбери подходящий план.",
+m1:"На месяц",m2:"Доступ на 1 месяц.",
+q1:"На 3 месяца",q2:"Доступ на 3 месяца.",
+y1:"На год",y2:"Доступ на 12 месяцев.",
+note:"Тарифы демонстрационные. Оплата и VPN-подключение пока не активированы.",
+footerText:"Твоя цифровая свобода."
+},
+EN:{
+navFeatures:"Features",navPlans:"Plans",
+headline:'Your privacy.<br><span>Your freedom.</span>',
+intro:"Discover a new level of digital freedom with NEXORA.",
+heroButton:"Explore plans →",
+featuresTitle:"Why NEXORA?",
+featuresSub:"Technology for your digital freedom.",
+f1:"Privacy",p1:"Designed to help protect your internet connection.",
+f2:"Performance",p2:"We are working towards a stable connection.",
+f3:"Global access",p3:"A network of servers in multiple countries is planned.",
+plansTitle:"NEXORA Plans",plansSub:"Choose your plan.",
+m1:"Monthly",m2:"Access for 1 month.",
+q1:"Quarterly",q2:"Access for 3 months.",
+y1:"Yearly",y2:"Access for 12 months.",
+note:"Demo prices. Payments and VPN connections are not active yet.",
+footerText:"Your digital freedom."
+}};
+function toggleLanguage(){
+currentLanguage=currentLanguage==="RU"?"EN":"RU";
+const t=translations[currentLanguage];
+Object.keys(t).forEach(id=>{
+const el=document.getElementById(id);
+if(el)el.innerHTML=t[id];
+});
+document.getElementById("language").textContent=currentLanguage==="RU"?"EN":"RU";
+document.documentElement.lang=currentLanguage.toLowerCase();
+}
+</script>
 </body>
 </html>
